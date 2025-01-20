@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package pb;
+
+option go_package = "./pb";
+
+service Calculate {
+    rpc Calculate (CalculateReq) returns (CalculateRes);
+}
+
+message CalculateReq {
+    int32 a = 1;
+    int32 b = 2;
+}
+
+message CalculateRes {
+    int64 c = 1;
+}
